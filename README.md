@@ -69,16 +69,16 @@ git clone <https://github.com/PLP-MERN-Stack-Development/testing-and-debugging-e
 cd mern-bug-tracker
 
 2. Install dependencies
-```bash```
-pnpm install
+
+```pnpm install```
 
 3. Start the server
-```bash```
-pnpm run server
+
+```pnpm run server```
 
 4. Start the client
-```bash```
-pnpm run client
+
+```pnpm run client```
 
 
  ##  Project Structure
