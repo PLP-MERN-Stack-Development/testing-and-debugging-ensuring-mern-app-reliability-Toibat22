@@ -1,87 +1,104 @@
-# Testing and Debugging MERN Applications
+# MERN Bug Tracker App
 
-This assignment focuses on implementing comprehensive testing strategies for a MERN stack application, including unit testing, integration testing, and end-to-end testing, along with debugging techniques.
+A simple **MERN stack Bug Tracker** application that allows users to create, view, update, and delete bugs. This project demonstrates a full-stack implementation with **React, Node.js, Express, and MongoDB**, along with testing using **Vitest**.
 
-## Assignment Overview
+---
 
-You will:
-1. Set up testing environments for both client and server
-2. Write unit tests for React components and server functions
-3. Implement integration tests for API endpoints
-4. Create end-to-end tests for critical user flows
-5. Apply debugging techniques for common MERN stack issues
+##  App Overview
 
-## Project Structure
+This is the main interface of the Bug Tracker App. Users can add new bugs, see the list of existing bugs, update their status, and delete bugs.
 
-```
-mern-testing/
-├── client/                 # React front-end
-│   ├── src/                # React source code
-│   │   ├── components/     # React components
-│   │   ├── tests/          # Client-side tests
-│   │   │   ├── unit/       # Unit tests
-│   │   │   └── integration/ # Integration tests
-│   │   └── App.jsx         # Main application component
-│   └── cypress/            # End-to-end tests
-├── server/                 # Express.js back-end
-│   ├── src/                # Server source code
-│   │   ├── controllers/    # Route controllers
-│   │   ├── models/         # Mongoose models
-│   │   ├── routes/         # API routes
-│   │   └── middleware/     # Custom middleware
-│   └── tests/              # Server-side tests
-│       ├── unit/           # Unit tests
-│       └── integration/    # Integration tests
-├── jest.config.js          # Jest configuration
-└── package.json            # Project dependencies
-```
+![Bug Tracker App Interface](./screenshots/bug-tracker-app.jpeg)
 
-## Getting Started
+---
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Follow the setup instructions in the `Week6-Assignment.md` file
-4. Explore the starter code and existing tests
-5. Complete the tasks outlined in the assignment
+##  Client-Side Tests
 
-## Files Included
+The frontend components were tested using **Vitest** to ensure proper rendering and functionality. All unit tests passed successfully.
 
-- `Week6-Assignment.md`: Detailed assignment instructions
-- Starter code for a MERN application with basic test setup:
-  - Sample React components with test files
-  - Express routes with test files
-  - Jest and testing library configurations
-  - Example tests for reference
+![Client-Side Tests Passed](./screenshots/vitest-client-tests-passed.png)
 
-## Requirements
+**Components tested:**
+- `Button` component
+- `BugForm` component
+- `BugItem` component
+- `BugList` component
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- npm or yarn
-- Basic understanding of testing concepts
+---
 
-## Testing Tools
+##  Server-Side Tests
 
-- Jest: JavaScript testing framework
-- React Testing Library: Testing utilities for React
-- Supertest: HTTP assertions for API testing
-- Cypress/Playwright: End-to-end testing framework
-- MongoDB Memory Server: In-memory MongoDB for testing
+The backend API routes were tested to ensure proper CRUD functionality and database integration. All tests passed successfully.
 
-## Submission
+![Server-Side Tests Passed](./screenshots/vitest-server-tests-passed.png)
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+**Routes tested:**
+- `POST /api/bugs` – create a new bug
+- `GET /api/bugs` – fetch all bugs
+- `PUT /api/bugs/:id` – update a bug
+- `DELETE /api/bugs/:id` – delete a bug
 
-1. Complete all required tests (unit, integration, and end-to-end)
-2. Achieve at least 70% code coverage for unit tests
-3. Document your testing strategy in the README.md
-4. Include screenshots of your test coverage reports
-5. Demonstrate debugging techniques in your code
+---
 
-## Resources
+##  Features
 
-- [Jest Documentation](https://jestjs.io/docs/getting-started)
-- [React Testing Library Documentation](https://testing-library.com/docs/react-testing-library/intro/)
-- [Supertest Documentation](https://github.com/visionmedia/supertest)
-- [Cypress Documentation](https://docs.cypress.io/)
-- [MongoDB Testing Best Practices](https://www.mongodb.com/blog/post/mongodb-testing-best-practices) 
+- **Add a Bug:** Users can submit new bugs with **title, description, and status**.  
+- **View Bugs:** Display all bugs in a list format.  
+- **Update Bug Status:** Change the status of a bug (e.g., Open, In progress, Resolved).  
+- **Delete Bugs:** Remove bugs from the list.  
+- **Responsive Design:** Works on mobile and desktop.  
+- **Client & Server Tests:** Ensures reliability and correctness.
+
+---
+
+##  Technologies Used
+
+- **Frontend:** React, HTML, CSS  
+- **Backend:** Node.js, Express.js  
+- **Database:** MongoDB  
+- **Testing:** Vitest  
+- **Package Manager:** pnpm  
+
+---
+
+##  How to Run the Project
+
+### 1. Clone the repository
+
+git clone <https://github.com/PLP-MERN-Stack-Development/testing-and-debugging-ensuring-mern-app-reliability-Toibat22.git>
+cd mern-bug-tracker
+
+2. Install dependencies
+pnpm install
+
+3. Start the server
+pnpm run server
+
+4. Start the client
+pnpm run client
+
+
+ ##  Project Structure
+
+mern-bug-tracker/
+│
+├─ client/                      # React frontend
+├─ server/                      # Express backend
+│  ├─ tests/                    # Server-side tests
+├─ src/                         # Backend source code
+│  ├─ models/                   # Mongoose models
+│  ├─ routes/                   # API routes
+│  ├─ utils/                    # Helper functions / utilities
+│  └─ app.js                    # Main Express app
+├─ screenshots/                 # Screenshots used in README
+│  ├─ bug-tracker-app.jpeg
+│  ├─ vitest-client-tests-passed.png
+│  └─ vitest-server-tests-passed.png
+├─ vitest.config.js             # Vitest configuration for tests
+├─ README.md                    # Project documentation
+└─ package.json
+
+## Author
+Abdulhammed Toibat Taye
+
+Made with Love..... PLP

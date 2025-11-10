@@ -1,0 +1,17 @@
+# Node modules
+node_modules/
+server/node_modules/
+client/node_modules/
+
+# Environment files
+*.env
+
+# Logs
+*.log
+
+# Coverage folder
+coverage/
+
+# Lock files
+pnpm-lock.yaml
+package-lock.json
